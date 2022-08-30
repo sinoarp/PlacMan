@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlacMan</title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script defer src="/js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="/css/mdb.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <script src="/js/teacher/signup.js" defer></script>
+  </head>
+  <body>
+    <nav id="topbar" class="navbar navbar-expand-md sticky-top">
+      <!-- sidebar toggle button -->
+      <button
+        id="topbar-toggler"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+      >
+        <span class="fas fa-align-left"></span>
+      </button>
+      <!-- topbar items toggle button -->
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#topbar-items"
+      >
+        <span class="fas fa-ellipsis-v"></span>
+      </button>
+      <!-- topbar items -->
+      <div class="navbar-collapse collapse" id="topbar-items">
+        <div class="container">
+          <a class="navbar-brand" href="/home">
+            <img src="/img/cap.png" alt="PlacMan Logo" loading="lazy" />
+            PLACMAN
+          </a>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light" href="#">
+              <i class="fa fa-envelope"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="content" class="content">
+      <h1 class="big-heading">Admin signup</h1>
+      <h4 class="subtitle">Fill in your details.</h4>
+
+      <form
+        class="w-75"
+        action="/student/signup"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+          
+           <input class="form-control mb-2" type="text" name="teacherName" id="teacherName"placeholder="Name">
+        <input class="form-control mb-2" type="text" name="teacherUid" id="teacherUid" placeholder="UID">
+        <input class="form-control mb-2" type="password" name="teacherPassword"id="teacherPassword" placeholder="Password">
+        <select class="form-control form-select mb-2" name="teacherGender" id="gender">
+            <option selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
+        <input class="form-control mb-2" type="text" name="teacherDept" id="teacherDept" placeholder="Department">
+        <input class="form-control mb-2" type="email" name="teacherEmail" id="teacherEmail" placeholder="Email">
+        <input class="form-control mb-2" type="phone" name="teacherPhone" id="teacherPhone" placeholder="Phone">
+        <input
+          class="btn btn-lg btn-secondary d-block mx-auto my-4"
+          type="submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <footer
+      class="text-center text-white mt-4"
+      style="background-color: #f1f1f1"
+    >
+      <!-- Copyright -->
+      <div
+        class="text-center text-dark p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2022 Copyright:
+        <a class="text-dark" href="#!">Dewesh Jha</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
+
+    <!-- <form action="/teacher/signup" method="POST" enctype="multipart/form-data">
+        <input type="text" name="teacherName" id="teacherName"placeholder="Name">
+        <input type="text" name="teacherUid" id="teacherUid" placeholder="UID">
+        <input type="password" name="teacherPassword"id="teacherPassword" placeholder="Password">
+        <select name="teacherGender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
+        <input type="text" name="teacherDept" id="teacherDept" placeholder="Department">
+        <input type="email" name="teacherEmail" id="teacherEmail" placeholder="Email">
+        <input type="phone" name="teacherPhone" id="teacherPhone" placeholder="Phone">
+        <input type="submit" value="Submit">
+    </form> -->
